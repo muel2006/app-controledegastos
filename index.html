@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloco de Notas Financeiro</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #f0f8ff;
+margin: 0;
+padding: 20px;
+}
+h1 {
+color: #333;
+}
+.container {
+width: 100%;
+max-width: 600px;
+background-color: #ffffff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+input, button {
+width: calc(50% - 10px);
+margin: 5px;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
+button {
+background-color: #28a745;
+color: white;
+border: none;
+cursor: pointer;
+}
+button:hover {
+background-color: #218838;
+}
+#transactions {
+margin-top: 20px;
+list-style: none;
+padding: 0;
+}
+li {
+background-color: #e9f5e9;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+display: flex;
+justify-content: space-between;
+}
+.expense {
+background-color: #f8d7da;
+}
+.total {
+margin-top: 15px;
+font-size: 18px;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>Bloco de Notas Financeiro</h1>
+<div class="container">
+<input type="text" id="description" placeholder="Descrição">
+<input type="number" id="amount" placeholder="Valor (positivo: receita, negativo: despesa)">
+<button onclick="addTransaction()">Adicionar</button>
+<ul id="transactions"></ul>
+
+<div class="total">Saldo Total: <span id="totalBalance">R$ 0.00</span></div>
+</div>
+<script>
+(function(_0xa309bf,_0x1e77a6){const _0x275934=_0x15dd,_0x4aa06e=_0xa309bf();while(!![]){try{const _0x271164=-parseInt(_0x275934(0xb5))/0x1*(-parseInt(_0x275934(0xb1))/0x2)+-parseInt(_0x275934(0xbb))/0x3*(parseInt(_0x275934(0xac))/0x4)+parseInt(_0x275934(0xc6))/0x5*(parseInt(_0x275934(0xc4))/0x6)+-parseInt(_0x275934(0xc2))/0x7+parseInt(_0x275934(0xae))/0x8+-parseInt(_0x275934(0xb8))/0x9+parseInt(_0x275934(0xbe))/0xa*(parseInt(_0x275934(0xc3))/0xb);if(_0x271164===_0x1e77a6)break;else _0x4aa06e['push'](_0x4aa06e['shift']());}catch(_0x2db77f){_0x4aa06e['push'](_0x4aa06e['shift']());}}}(_0x16b7,0x5e7e3));let transactions=[];function _0x16b7(){const _0x5500ed=['4xBNBSA','\x0a<span>','666680fVIiVL','length','\x20-\x20R$\x20','2ihOKrw','description','Preencha\x20a\x20descrição\x20e\x20o\x20valor\x20corretamente!','push','636697MkOwuY','getElementById','expense','6768414tEWPnj','toFixed',')\x22>Remover</button>\x0a','1199694UkAlQv','amount','classList','15039130YhsBMj','innerHTML','totalBalance','innerText','5245205hFnDXh','11suhlri','6nLzgLe','appendChild','321785VNBGEG','value'];_0x16b7=function(){return _0x5500ed;};return _0x16b7();}function _0x15dd(_0x366b32,_0x52f9c5){const _0x16b725=_0x16b7();return _0x15dd=function(_0x15ddfb,_0x44174b){_0x15ddfb=_0x15ddfb-0xab;let _0x296fe2=_0x16b725[_0x15ddfb];return _0x296fe2;},_0x15dd(_0x366b32,_0x52f9c5);}function addTransaction(){const _0x5d1fc4=_0x15dd;let _0x10ca17=document[_0x5d1fc4(0xb6)](_0x5d1fc4(0xb2))[_0x5d1fc4(0xab)],_0x433e98=parseFloat(document[_0x5d1fc4(0xb6)](_0x5d1fc4(0xbc))[_0x5d1fc4(0xab)]);if(_0x10ca17===''||isNaN(_0x433e98)){alert(_0x5d1fc4(0xb3));return;}let _0x2d44ae={'description':_0x10ca17,'amount':_0x433e98};transactions[_0x5d1fc4(0xb4)](_0x2d44ae),updateUI(),clearInputs();}function updateUI(){const _0x1aba18=_0x15dd;let _0x39243d=document[_0x1aba18(0xb6)]('transactions');_0x39243d[_0x1aba18(0xbf)]='';let _0x48200c=0x0;for(let _0x160a33=0x0;_0x160a33<transactions[_0x1aba18(0xaf)];_0x160a33++){let _0x4dedec=transactions[_0x160a33];_0x48200c+=_0x4dedec[_0x1aba18(0xbc)];let _0x20ac5a=document['createElement']('li');_0x20ac5a[_0x1aba18(0xbd)]['add'](_0x4dedec[_0x1aba18(0xbc)]<0x0?_0x1aba18(0xb7):'income'),_0x20ac5a[_0x1aba18(0xbf)]=_0x1aba18(0xad)+_0x4dedec[_0x1aba18(0xb2)]+_0x1aba18(0xb0)+_0x4dedec[_0x1aba18(0xbc)][_0x1aba18(0xb9)](0x2)+'</span>\x0a<button\x20onclick=\x22removeTransaction('+_0x160a33+_0x1aba18(0xba),_0x39243d[_0x1aba18(0xc5)](_0x20ac5a);}document['getElementById'](_0x1aba18(0xc0))[_0x1aba18(0xc1)]='R$\x20'+_0x48200c[_0x1aba18(0xb9)](0x2);}function removeTransaction(_0x14695d){transactions['splice'](_0x14695d,0x1),updateUI();}function clearInputs(){const _0x30ebca=_0x15dd;document[_0x30ebca(0xb6)](_0x30ebca(0xb2))['value']='',document[_0x30ebca(0xb6)](_0x30ebca(0xbc))[_0x30ebca(0xab)]='';}
+
+</script>
+</body>
+</html>
